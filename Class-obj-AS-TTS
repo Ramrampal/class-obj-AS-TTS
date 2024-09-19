@@ -1,0 +1,40 @@
+
+#include <iostream>
+using namespace std;
+
+class Add {
+    int a, b; 
+
+public:
+    // Default constructor
+    Add() {
+        a = b = 0;
+    }
+
+    // Parameterized constructor
+    Add(int m, int n) {
+        a = m;
+        b = n;
+    }
+
+    // Method to add a and b
+    int sum() {
+        return a + b; // corrected method name to avoid confusion
+    }
+
+    // Method to display the result
+    void display() {
+        cout << sum() << endl; // corrected display method
+    }
+};
+
+int main() {
+    int x, y;
+    cout << "Enter two integers: ";
+    cin >> x >> y;
+
+    Add obj(x, y); // corrected object instantiation
+    obj.display(); // corrected display method call
+
+    return 0;
+}
