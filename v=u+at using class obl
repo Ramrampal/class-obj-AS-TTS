@@ -1,0 +1,71 @@
+#include<iostream>
+using namespace std;
+class Ram
+{
+    int u,a,t;
+    public:
+    Ram()
+    {
+       u=a=t=0;
+    }
+    Ram(int m,int n,int o)
+    {
+        u=m,a=n,t=o;
+    }
+    void hiiRam()
+    {
+        int v;
+        v=u+a*t;
+        cout<<v;
+
+    }
+};
+ int main()
+ {
+    int u,a,t;
+    cin>>u>>a>>t;
+    Ram Rampal(u,a,t);
+    Rampal.hiiRam();
+ }
+
+
+
+
+
+/*chet gpt*/
+
+
+
+#include <iostream>
+using namespace std;
+
+class Ram {
+    int u, a, t;
+
+public:
+    Ram() : u(0), a(0), t(0) {} // Default constructor
+
+    Ram(int m, int n, int o) : u(m), a(n), t(o) {} // Parameterized constructor
+
+    void hiiRam() {
+        int v = u + a * t;
+        cout << v << endl; // Print the result
+    }
+};
+
+int main() {
+    int u, a, t;
+    cin >> u >> a >> t; // Input values for u, a, t
+    Ram Rampal(u, a, t); // Create an object of Ram with the input values
+    Rampal.hiiRam(); // Call the hiiRam function
+    return 0; // Indicate that the program ended successfully
+}
+
+
+
+
+
+
+
+
+  
