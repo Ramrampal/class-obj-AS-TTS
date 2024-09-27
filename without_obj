@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+class Raj {  
+/*
+compilar created  when you not creat any type of constrctor
+>non pera constructor
+>copy constructor
+>distructor
+
+*/
+
+};
+
+int main() {
+    Raj obj; 
+    return 0;
+}
