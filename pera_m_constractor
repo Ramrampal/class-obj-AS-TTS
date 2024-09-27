@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace  std;                                                
+class A{
+
+
+public:
+  A(){
+    cout<<"x";
+  }
+  A(int m){
+    cout<<"y";
+
+  }
+ };
+ int main()
+ {
+    A obj(5); // constructor with an int parameter
+    return 0;
+ }
+
+# outpyt y
