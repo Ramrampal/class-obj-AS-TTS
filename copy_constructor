@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+class R {
+public:
+    R() {
+        cout << "Rampal" << endl;  
+    }
+    
+    R(int N) {
+        cout << "panna" << endl;   
+    }
+    
+    R(R& l) {
+        cout << "copy constructor" << endl;  
+    }
+};
+
+int main() {
+    R obj(86);  // Creates an instance of R using the int constructor
+    R p(obj);   // Creates a copy of obj using the copy constructor
+    return 0;
+}
+
+/* output:----
+panna
+copy constructor
+*/
