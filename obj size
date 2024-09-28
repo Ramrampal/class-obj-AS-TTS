@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+class N {
+public:
+
+
+    
+};
+
+int main() {
+    N obj; 
+    cout << sizeof(obj) << endl; 
+
+
+    return 0; 
+}
+
+/* output
+ 1 
+(1 is tha size of obj)
+*/
