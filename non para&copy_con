@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+class N{
+
+
+
+
+
+};
+int main()
+{
+  N obj;
+  N  (N & other);
+  return 0;
+}
+
+/* output 
+compile time error
