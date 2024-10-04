@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+class Bank {   
+    int a; 
+public:
+
+   
+    Bank() {
+        a = 0;
+    }
+    
+  
+    Bank(int x) {
+        a = x;
+    }
+    
+  
+    void withdraw(int y) {
+       a-=y;
+    }
+    
+    // Method to deposit money
+    void deposit(int y) {
+        a += y; 
+    }
+    
+    // Method to display the current amount
+    void bankEnquiry() { 
+        cout << "Current Amount: " << a<< endl;
+    }
+};
+
+int main() {
+    Bank y; 
+    int amount;
+    cout << "Enter amount to deposit: ";
+    cin >> amount; 
+    y.deposit(amount); 
+    y.bankEnquiry();
+    y.deposit(500);
+
+    return 0; 
+}
