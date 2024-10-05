@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class Greading_system{
+    char calculate_Gread(int m){
+            char G='0';
+             if(m>33&&m<=60)
+             G= 'C';
+             else if(m>60&&m<80)
+             G='B';
+             else if( m>80)
+             G='A';
+            
+             return G; 
+    }
+    public:
+    void dis_Gread(int m){
+
+        cout<<calculate_Gread(m);
+    }
+
+};
+int main(){
+    Greading_system l;
+     int m;
+     cout<<"Enter marks of student";
+     cin>>m;
+     l.dis_Gread(m);
+     return 0;
+     
+     }
