@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+
+class A{
+public:
+int a;
+ A(){
+    a=5;
+ }
+};
+int main(){
+    A l;
+   
+    cout<<l.a;
+  
+    return 0;
+}
+//5
