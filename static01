@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+class R{
+    int a = 6;  
+  // static int g; 
+public:
+static int g;
+    int d() {
+        g+=a;
+        return g;
+        cout<<a;
+    }
+};
+
+int R::g = 5;
+
+int main() {
+    R r1;
+    cout << r1.d(); 
+
+    return 0;
+}
+// output 11
