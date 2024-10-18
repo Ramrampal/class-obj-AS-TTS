@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+class N{
+ int a;
+ public:
+ N(){
+    a=5;
+    //cout<<a;
+ }
+ int d(){
+ return a;
+ }
+ 
+
+};
+int main(){
+ N R;
+ cout<<R.d();
+
+ 
+}
