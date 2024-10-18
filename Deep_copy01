@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+class D {
+    public:
+    D(){
+        cout<<"Dafault\n";
+    }
+    D (  D&p){
+        cout<<"copy";
+    }
+};
+int main(){
+    D x,y;
+    y=x;
+    return 0;
+}
