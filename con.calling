@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+ class A{
+     public:
+     static int p;
+     A (A&l){
+        cout<<"x";
+     }
+     A (int m){
+        cout<<"z";
+     }
+ };
+ int A::p=5;
+   class B :public A{
+      public:
+      B() : A(0){
+        cout<<"M";
+      }
+      B(int m ) : A(*this){
+        cout<<"N";
+      }
+   };
+
+
+   int main(){
+    B l (5);
+    
+    
+   }
+  
