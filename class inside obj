@@ -1,0 +1,39 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+class A {
+   int a;
+   public:
+   A(){
+     a=7;
+    cout<<"Ram" <<endl;
+   }
+   void R (){
+ //  B b1;
+    cout<<"mohan"<<endl;
+   }
+};
+class B {
+   int b;
+   public:
+   B(){
+     b=9;
+   
+   }
+   void S (){
+    A b1;
+    cout<<"Jagat";
+   }
+};
+
+
+int main()
+{
+    A p;
+    B b1;
+    p .R();
+   b1.S();
+  // b1.R();
+
+}
