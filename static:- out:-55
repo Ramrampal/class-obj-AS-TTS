@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class A{
+    static int a;
+    public:
+    static int R(){
+        return a;
+    }
+
+};
+int A :: a=6;
+class B {
+    int b;
+    public:
+    B(){
+        b=7;
+    }
+    int p (){
+        return b;
+    }
+
+
+};
+int main(){
+    B l;
+    cout<<(A::R() * l.p()) + ( A:: R() +l.p() );
+    return 0;
+}
