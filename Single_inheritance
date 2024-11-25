@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class A {
+
+ public:
+  int a;
+  A (){
+    cout<< "Non pera"<<endl;
+  }
+  A(int a){
+    cout<<"para ";
+  }
+  void  show() {
+    cout<<"rak";
+    
+  }
+};
+ class B: public A{
+ public:
+    void  dis(){
+        cout<<"dis";
+
+    }
+ };
+  int main(){
+    B b;
+    b.dis();
+    return 0;
+  }
