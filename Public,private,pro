@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+class A{
+   public: 
+   int b;
+   A(){
+    b=5;
+   }
+};
+class B: public A{ // if make A private ,protected  so not access the value of b int main function
+
+};
+class C :public B{
+    public:
+ void X(){
+    cout<<"b:"<<b;
+ }
+};
+int main(){
+    C c1;
+    cout<<"b from A :"<<c1.b<<endl;
+    c1.X();
+    return 0;
+}
+
