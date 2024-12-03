@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+class A{
+    public:
+    A(){
+        cout<<" A constructor"<< endl;
+    }
+};
+class  B: public A{
+    public:
+    B(){
+        cout<<"B con"<<endl;
+
+    }
+};
+class c : public A{
+    public:
+    c(){
+        cout<<"c con."<< endl;
+    }
+};
+class D : public c,public B{
+    public:
+    D(){
+        cout<<"D con";
+    }
+};
+int main(){
+    D d1;
+    return 0;
+}
+
+outut
+'''
+ A constructor
+c con.
+ A constructor
+B con
+D con
