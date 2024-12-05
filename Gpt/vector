@@ -1,0 +1,23 @@
+import itertools
+
+# Input vector (list of numbers)
+vector = [5, 3, 8, 1, 4]
+
+# 1. Find the maximum value
+max_value = max(vector)
+
+# 2. Find the minimum value
+min_value = min(vector)
+
+# 3. Compute the cumulative sum of the vector
+cumulative_sum = list(itertools.accumulate(vector))
+
+# 4. Sort the vector in ascending order
+sorted_vector = sorted(vector)
+
+# Print the results
+print(f"Vector: {vector}")
+print(f"Maximum Value: {max_value}")
+print(f"Minimum Value: {min_value}")
+print(f"Cumulative Sum: {cumulative_sum}")
+print(f"Sorted Vector: {sorted_vector}")
