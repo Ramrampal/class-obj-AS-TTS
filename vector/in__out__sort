@@ -1,0 +1,28 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main(){
+int n;
+cout<<"enter number :- ";
+cin>>n;
+vector<int>p(n);
+for(int i=0;i<n;i++){
+    cin>>p[i];
+}
+sort (p. begin(),p.end());
+ 
+for(int i=0;i<n;i++){
+    cout<<p[i] << " ";
+}
+
+}
+ /* output
+enter number :- 5
+65
+43
+87
+43
+67
+43 43 65 67 87
+*/
