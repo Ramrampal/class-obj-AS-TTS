@@ -1,0 +1,33 @@
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int n, MX_w;
+    cout << "Enter the maximum weight capacity of the lift: ";
+    cin >> MX_w;
+    cout << "Enter the number of people: ";
+    cin >> n;
+
+    vector<int> p(n);
+    cout << "Enter the weights of the people: ";
+    for (int i = 0; i < n; i++) {
+        cin >> p[i];
+    }
+
+    sort(p.begin(), p.end());
+
+    int Total_weight = 0, count = 0;
+    for (auto k : p) {
+        if (Total_weight + k > MX_w) {
+            break;
+        }
+        Total_weight += k;
+        count++;
+    }
+
+    cout << "Maximum number of people the lift can carry: " << count << endl;
+    return 0;
+}
