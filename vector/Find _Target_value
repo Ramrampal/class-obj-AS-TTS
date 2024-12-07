@@ -1,0 +1,19 @@
+#include<iostream>
+#include<algorithm>
+#include<vector>
+using namespace std;
+int main(){
+  
+    vector<int>p ={10,20,30,40,50};
+        int target;
+    cout << "Enter the element to search: ";
+    cin >> target;
+    auto t=find(p.begin(),p.end(),target);
+    if(t!=p.end()){
+        cout<<t-p.begin();
+    }
+    else{
+        cout<<"Element not found ";
+    }
+    return 0;
+}
