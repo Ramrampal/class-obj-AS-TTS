@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int x,sum;
+    cin>>x;
+    string y = to_string(x);
+    for(auto k:y){
+        sum+= int(k-'0');
+        
+    }
+    cout<<sum;
+}
+
+output
+55543213
+sum 30
