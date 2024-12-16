@@ -1,0 +1,25 @@
+input 40340054
+out 43454000
+zero right side shift
+
+
+#include<iostream>
+
+using namespace std;
+int main(){
+    int  x;
+    cin>> x;
+    string  s1,s2="";
+    string p= to_string(x);
+    for(auto k:p){
+        if( (int) k - '0' ==0){    \\ string char  ko int me change ascii value -ve kiya
+            s1+=k;
+        }
+        else{
+            s2+=k;
+        }
+    }
+    cout<<stoi(s2+s1);   \\ concetinetion
+    return 0;
+
+}
