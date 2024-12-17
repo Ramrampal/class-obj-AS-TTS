@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main() {
+    
+    int first = 124676;
+    int second = 436408;
+
+   
+    string strFirst = to_string(first);
+    string strSecond = to_string(second);
+    
+    vector<int> matchingDigits;
+    for (size_t i = 0; i < strFirst.size() && i < strSecond.size(); i++) {
+        if (strFirst[i] == strSecond[i]) {
+            matchingDigits.push_back(strFirst[i] - '0'); 
+    }
+    for (int digit : matchingDigits) {
+        cout << digit << " ";
+    }
+    cout << endl;
+
+   
+    int result = 0;
+    for (int digit : matchingDigits) {
+        result = result * 10 + digit; 
+    }
+
+    cout << "Matching digits as integer: " << result << endl;
+
+    return 0;
+    }
+}
