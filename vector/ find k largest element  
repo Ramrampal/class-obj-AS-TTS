@@ -1,0 +1,39 @@
+#include <iostream>
+#include <vector>
+#include <algorithm> // For sort function
+using namespace std;
+
+void kLargest(vector<int>& nums, int k) {
+    // Sort the vector in descending order
+    sort(nums.begin(), nums.end(), greater<int>());
+    
+    // Output the k largest elements
+    cout << "\nLargest " << k << " Elements: ";
+    for (int i = 0; i < k; i++) 
+        cout << nums[i] << " ";
+}
+
+int main() {
+    int n;
+    cout << "Enter the number of elements in the array: ";
+    cin >> n;
+
+    vector<int> nums(n); // Declare a vector of size n
+    cout << "Enter the elements of the array: ";
+    for (int i = 0; i < n; i++) 
+        cin >> nums[i];
+
+    int k;
+    cout << "Enter the number of largest elements to find (k): ";
+    cin >> k;
+
+    // Validate the input
+    if (k > n || k <= 0) {
+        cout << "Invalid input! k should be between 1 and " << n << ".";
+    } else {
+        kLargest(nums, k); // Call the function to find k largest elements
+    }
+
+    return 0;
+}
+
