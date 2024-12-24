@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class A{
+    int a,b;
+    float c;
+    public:
+    A(){
+        cout<<" Enter  teo  number ...";
+        cin>> a>>b;
+        cout<< a<< " "<< b<< endl;
+    }
+    A (int x,int y){
+        a=x;  b=y; cout<<a<< " "<< b<<endl;
+    }
+    A( int x, float y ){
+        a=x;
+        c=y;
+        cout<<a<< " "<<b<< endl;
+    }
+
+};
+int main(){
+    A  obj, obj2(100,200);
+    
+    return 0;
+    
+}
