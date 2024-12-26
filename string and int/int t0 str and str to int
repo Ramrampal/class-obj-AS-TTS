@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    int num = 1234;
+    
+    // Convert int to string
+    string str_num = to_string(num);
+    cout << "The integer " << num << " as a string: " << str_num << endl;
+
+    // Convert string back to int
+    int converted_num = stoi(str_num);
+    cout << "The string \"" << str_num << "\" as an integer: " << converted_num << endl;
+
+    return 0;
+}
