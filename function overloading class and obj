@@ -1,0 +1,24 @@
+// function overloading = Whenever a program contains more 
+//than one function with same name different types of 
+//parameters called function overloading
+#include<iostream>
+using namespace std;
+class A{
+    int num1 = 20, num2 = 10;
+    public: // function ko public isliye kiya huaa hai kyoki ese bahar se coll karna hota hai
+    void fun(){
+                   int sum=num1+num2;
+                   cout<<"Addition"<<sum<<endl;
+    }
+    void fun(int a, int b){
+                      int sub=a-b;
+                      cout<<"Substraction"<<sub<<endl;
+    }
+    
+};
+int main(){
+    A obj;
+    obj.fun();// pahle ye coll hoga fun. ka signature dekhkar hi pta lga le rhe hai ki kon coll hoga isliye ese complile time polymorphism  ka ex. bhi khte hai
+    obj.fun(100,50);
+    return 0;
+}
