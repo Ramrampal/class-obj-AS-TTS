@@ -1,0 +1,71 @@
+mplement a program to update an element in the given array based on position
+
+Input Format
+
+size,array elements and element to be updated and location
+
+Constraints
+
+size<100
+
+Output Format
+
+return array after updating
+
+Sample Input 0
+
+8
+4 7 8 6 1 2 3 5
+0
+9
+Sample Output 0
+
+9 7 8 6 1 2 3 5
+Sample Input 1
+
+3
+11 22 33
+1
+44
+Sample Output 1
+
+11 44 33
+Sample Input 2
+
+5
+8 9 4 5 3
+4
+111
+Sample Output 2
+
+8 9 4 5 111
+
+// solution
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int n ,position,new_element ;
+    cin>> n ;
+    vector<int > p(n);
+  
+    for(int i=0;i<n;i++){
+        cin>> p[i];
+    }
+     cin >> position >> new_element;
+    
+   
+    p[position] = new_element;
+    
+    for(int i=0 ;i<n;i++){
+        cout<<p[i]<<" ";
+    }
+    
+    return 0;
+}
