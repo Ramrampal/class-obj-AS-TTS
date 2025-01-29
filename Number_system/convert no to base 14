@@ -1,0 +1,23 @@
+// convert no to base 14
+#include <iostream>
+using namespace std;
+int main(){
+     int n;
+     cin>>n;
+     string s="";
+     while ( n){
+         int remainder = n %14;
+         if( remainder <= 9){
+             // int to str 
+             s = to_string(remainder ) + s;
+         }
+          else{
+              char p= ( char) ( remainder +55);  // 10 + 55 = 65 (ASCII value for A)
+              string  R ( 1,p);  // char to str
+              s= R +s;
+          }
+          n/=14;
+     }
+     cout<< s;
+}
+
