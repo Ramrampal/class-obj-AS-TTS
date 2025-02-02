@@ -1,6 +1,6 @@
 input 40340054
 out 43454000
-zero right side shift
+//zero right side shift
 
 
 #include<iostream>
