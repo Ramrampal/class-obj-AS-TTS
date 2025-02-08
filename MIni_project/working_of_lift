@@ -30,4 +30,5 @@ int main() {
 
     cout << "Maximum number of people the lift can carry: " << count << endl;
     return 0;
+
 }
