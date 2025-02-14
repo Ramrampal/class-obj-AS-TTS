@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+#include  <vector>
+#include <algorithm>
+int  main(){
+    int n; 
+     cin>>n;
+     vector<int>p(n);
+     for( int i=0;i<n;i++){
+         cin>>p[i];
+     }
+     for( int i=0; i < (1 << n);i++){
+         cout<<"{";
+         for( int j=0;j<n; j++){
+             if ( i & (i << j)){ 
+                 cout<<p[j]<< " ";
+
+             }
+         }
+     
+          cout<<"}"<<endl;
+     }
+     return 0;
+}
+/*
+4
+104 86 113 135
+{}
+{104 }
+{104 }
+{104 86 }
+{104 }
+{104 113 }
+{104 86 }
+{104 86 113 }
+{104 }
+{104 135 }
+{104 113 }
+{104 86 113 135 }
+{104 86 }
+{104 86 113 135 }
+{104 86 113 }
+{104 86 113 135 }
+
+
+=== Code Execution Successful ===
+*/
