@@ -1,0 +1,94 @@
+//kadne algorithm
+#include<iostream>
+#include<vector>
+using namespace std;
+int maxsum(vector<int> v){
+    int sum=0;
+    int max=v[0];
+    
+    
+    for(auto i:v){
+        sum+=i;
+    
+    if(sum>max){  // 2nd step
+        max=sum;
+    }
+    if( sum<0){   // 1st step
+        sum=0;
+    }
+    }
+    return max;
+}
+int main(){
+    int n,max;
+    cin>>n;
+    vector<int>v(n);
+    for(int i=0;i<n;i++){
+        cin>>v[i];
+    }
+ cout<<maxsum(v);
+    
+    return 0;
+}
+
+
+
+/*
+5
+-2 -3 4 -1 -2
+4
+*/
+
+
+
+👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻
+/*
+#include <iostream>
+#include <vector>
+using namespace std;
+
+// Function to find the maximum subarray sum using Kadane's Algorithm
+int maxsum(vector<int> v) {
+    int sum = 0;        // Stores the current subarray sum
+    int max = v[0];     // Stores the maximum subarray sum found so far
+
+    for (auto i : v) {  // Loop through each element in the array
+        sum += i;       // Add the current element to the sum
+        
+        if (sum > max) { // If the current sum is greater than max, update max
+            max = sum;
+        }
+        if (sum < 0) {   // If the current sum becomes negative, reset it to 0
+            sum = 0;
+        }
+    }
+    return max;         // Return the maximum subarray sum
+}
+
+int main() {
+    int n;
+    cin >> n;  // Input the size of the array
+    
+    vector<int> v(n);  // Declare a vector of size n
+    for (int i = 0; i < n; i++) {
+        cin >> v[i];  // Input array elements
+    }
+    
+    cout << maxsum(v);  // Call maxsum function and print the result
+    
+    return 0;
+}
+
+/*
+Input:
+5
+-2 -3 4 -1 -2
+
+Output:
+4
+*/
+*/
+
+
+
+
