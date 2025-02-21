@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+  int LCM( int m, int n){
+       int a,b;
+       a=m;
+       b=n;
+       while (m!=n){
+           if( m<n){
+               m+=a;
+           }
+           else{
+               n+=b;
+           }
+       }
+       return n;
+  }
+  int main(){
+      int a,b,c;
+      cin>>a>>b>>c;
+      cout<<LCM(LCM(a,b),c);
+     
+  }
