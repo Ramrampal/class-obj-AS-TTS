@@ -1,0 +1,32 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+ bool prime( int n){
+     if(n<2){
+         return false;
+     }
+     for( int i=2;i<=sqrt(n); i++){
+         if( n%i==0){
+             return  false;
+         }
+     }
+     return true;
+ }
+  void findPrimeInRange( int  start, int end){
+      int a,b;
+      if( a>b){
+          swap(a,b);
+      }
+      for( int i= start; i<= end; i++)
+{
+    if( prime(i)){
+        cout<<i<<" ";
+    }
+} 
+}
+int main(){
+    int start, end;
+    cin>> start>> end;
+    findPrimeInRange( start, end);
+    return 0;
+}
