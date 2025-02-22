@@ -1,0 +1,22 @@
+#include<iostream>
+#include <cmath>
+using namespace std;
+ // find prime  no.
+ int prime( int n){
+     int a;
+     if( n<2){
+         return a;
+     }
+     for( int i=2;i<=sqrt(n);i++){
+         if(n% i==0){
+             return a;
+         }
+     }
+     return 1;
+ }
+ int main(){
+     int n;
+     cin>> n;
+     cout<<prime( n);
+     return 0;
+ }
