@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+class A {
+    int m;
+
+public:
+    A() {
+        m = 0;
+        cout << "non parameter constructor" << endl;
+    }
+
+    A(int x) {
+        m = x;
+        cout << "parameter constructor" << endl;
+        cout << m << endl;
+    }
+};
+
+int main() {
+    A a1;      // Calls default constructor
+    A a2(10);  // Calls parameterized constructor
+    return 0;
+}
