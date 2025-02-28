@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n; 
+    cin>>n;
+    string p="";
+    string s = to_string(n);
+    
+    for(auto k: s){
+        int x = k-'0';
+        if( x%2==0){
+            p +=k;
+        }
+    }
+      cout<<stoi(p);
+}
+/*
+input                   output
+
+ 24673                  246
+ 123                    2
+ 592813                 28
+ */
