@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+void findQuadrant(int x, int y) {
+    if (x > 0 && y > 0){
+      cout << "First Quadrant (Q1)";
+    }
+    else if (x < 0 && y > 0){
+      cout << "Second Quadrant (Q2)";
+    }
+    else if (x < 0 && y < 0){
+        
+      cout << "Third Quadrant (Q3)";
+     }
+       
+    else if (x > 0 && y < 0){
+         cout << "Fourth Quadrant (Q4)";
+    }
+ 
+    else if (x == 0 && y != 0){
+         cout << " Y-axis";
+    }
+    
+    else if (y == 0 && x != 0){
+        cout << "X-axis";  
+    }
+      else
+    
+     cout << "(0,0) Origin";
+}
+
+int main() {
+    int x, y;
+    cout << "Enter x ";
+    cin>>x;
+    cout<<"Enter y ";
+    cin>>y;
+     findQuadrant(x, y);
+    return 0;
+}
+ 
