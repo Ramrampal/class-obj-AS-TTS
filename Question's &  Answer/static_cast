@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double num = 10.7;
+    int intNum = static_cast<int>(num); //💡💡💡💡💡💡 Converts double to int
+
+    cout << "Converted int: " << intNum << endl; // Output: 10
+    return 0;
+}
