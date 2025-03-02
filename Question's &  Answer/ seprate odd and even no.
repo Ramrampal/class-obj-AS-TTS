@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    int even = 0, odd = 0;
+    string s = to_string(n);
+
+    for (char ch : s) {
+        int digit = ch - '0'; // Convert character to integer
+
+        if (digit % 2 == 0) {
+            even += digit; // Sum of even digits
+        } else {
+            odd += digit;  // Sum of odd digits
+        }
+    }
+
+    cout << "Sum of even digits: " << even << endl;
+    cout << "Sum of odd digits: " << odd << endl;
+
+    return 0;
+}
