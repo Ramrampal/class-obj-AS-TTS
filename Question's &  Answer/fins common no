@@ -1,0 +1,29 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main(){
+    int a,b,c;
+    cout<<" Enter first no :";
+    cin>> a;
+    cout<<"Enter second no :";
+    cin>>b;
+    cout<<"Enter third no :";
+    cin>>c;
+    string R ="";
+    string s1= to_string(a);
+    string s2 = to_string(b);
+    string s3 = to_string (c);
+    for(auto k:s1){
+         auto t = find(s2.begin(), s2.end(), k);
+         auto p= find (s3.begin(), s3.end() ,k);
+         if( t!= s2.end() && p!= s3.end()){
+               R +=k;
+            
+             
+         }
+    }
+     sort( R.begin(), R.end());
+     cout<< " common no. is : ";
+    cout<<stoi(R);
+    return 0;
+}
