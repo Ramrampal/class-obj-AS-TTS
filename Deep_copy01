@@ -11,6 +11,6 @@ class D {
 };
 int main(){
     D x,y;
-    y=x;
+    y=x; // x is existing obj
     return 0;
 }
