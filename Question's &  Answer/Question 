@@ -1,0 +1,76 @@
+/*
+Enter number of elements: 5
+Enter elements: 18 29 333 46 99    output 18
+
+Digital Root Vector: 9 2 9 1 9
+Maximum Digital Root: 9
+Original Number with Maximum Digital Root: 18
+
+
+*/
+
+
+
+
+
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+// Function to calculate recursive sum of digits (digital root)
+int digitalRoot(int num) {
+    while (num >= 10) {
+        int sum = 0;
+        while (num > 0) {
+            sum += num % 10;
+            num /= 10;
+        }
+        num = sum;
+    }
+    return num;
+}
+
+int main() {
+    int n;
+    cout << "Enter number of elements: ";
+    cin >> n;
+
+    vector<int> vec(n);
+    cout << "Enter elements: ";
+    for (int i = 0; i < n; i++) {
+        cin >> vec[i];
+    }
+
+    // Finding digital root for each element
+    vector<int> sumVec(n);
+    for (int i = 0; i < n; i++) {
+        sumVec[i] = digitalRoot(vec[i]);
+    }
+
+    // Finding max digital root
+    int maxSum = *max_element(sumVec.begin(), sumVec.end());
+
+    // Find the original number with the maximum digital root
+    int correspondingNum = -1;
+    for (int i = 0; i < n; i++) {
+        if (sumVec[i] == maxSum) {
+            correspondingNum = vec[i];
+            break;
+        }
+    }
+
+    // Output results
+    cout << "Digital Root Vector: ";
+    for (int sum : sumVec) {
+        cout << sum << " ";
+    }
+    cout << endl;
+
+    cout << "Maximum Digital Root: " << maxSum << endl;
+    cout << "Original Number with Maximum Digital Root: " << correspondingNum << endl;
+
+    return 0;
+}
