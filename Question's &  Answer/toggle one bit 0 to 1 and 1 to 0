@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+// Function to toggle between 0 and 1
+int toggle(int value) {
+    return value == 0 ? 1 : 0;
+}
+
+int main() {
+    int value;
+    cout << "Enter a value (0 or 1): ";
+    cin >> value;
+    
+    if (value != 0 && value != 1) {
+        cout << "Invalid input. Please enter 0 or 1." << endl;
+        return 1;
+    }
+    
+    int toggledValue = toggle(value);
+    cout << "Toggled value: " << toggledValue << endl;
+    
+    return 0;
+}
