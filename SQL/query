@@ -1,0 +1,11 @@
+Q1:-Write a query to output all the columns from the Products table.
+ans :-select * from products;
+
+ Q2:-Write a query to find all product_name and category that have a price greater than 100.00 from the Products table.
+ ans:- select product_name ,category from Products  where price>100.00;
+
+Q3:-Write a query to calculate the average salary across all companies combined. Rename the column as avg_salary.
+ans:- select AVG( salary ) AS avg_salary from works;
+
+Q4:-Write a query to retrieve the department_name and location of people who live in location that starts with 'S'.
+ans:-select department_name , location from departments where  location LIKE 's%';
