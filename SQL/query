@@ -9,3 +9,12 @@ ans:- select AVG( salary ) AS avg_salary from works;
 
 Q4:-Write a query to retrieve the department_name and location of people who live in location that starts with 'S'.
 ans:-select department_name , location from departments where  location LIKE 's%';
+
+Q5:-Write a query to retrieve book_id, title, author and published_year of the books which have NULL rating for their books.
+ ans:-select book_id , title, author,published_year from  library where rating is null;
+
+Q6:-Create a query to retrieve the employee_name, company, and salary for employees in the full-time category, ordered by salary in descending order
+ans-SELECT employee_name, company, salary FROM Employees WHERE category = 'Full-Time' ORDER BY salary DESC;
+
+Q7:-Write a query to group the employees by their department and display the total number of employees (as total_employees) in each department.
+ans:-select department , count (*) as total_employees  from employees group by department;
