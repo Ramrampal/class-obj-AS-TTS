@@ -1,0 +1,30 @@
+👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻 Class ke menber upar neeche ho sakte h 👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻✅✅
+
+
+#include<iostream>
+using namespace std;
+
+class A {
+    int a;
+
+    void R() {
+        cout << m << endl; //  print m
+    }
+
+public:
+    A() {
+        m = 5; // Initialize m in constructor
+    }
+
+void t() {
+        R(); // Call R to print m
+    }
+
+    int m; // Declare m at the end of the class
+};
+
+int main() {
+    A obj;
+    obj.t(); // Output will be 5
+    return 0;
+}
