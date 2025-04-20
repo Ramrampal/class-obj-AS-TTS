@@ -1,0 +1,19 @@
+ Q1. List all unique employee names.
+ ans : SELECT DISTINCT Name FROM Employees;
+
+Q2.List unique department-city pairs.
+ans : SELECT DISTINCT Department, City FROM Employees;
+
+Q3.  Show distinct cities where Finance employees are based.
+ans : SELECT DISTINCT City FROM Employees WHERE Department = 'Finance';
+
+Q4. List all unique salaries greater than 60000
+ans: SELECT DISTINCT Salary FROM Employees WHERE Salary > 60000;
+
+Q5. Which departments have salaries less than 75000?
+ans : SELECT DISTINCT Department FROM Employees WHERE Salary < 75000;
+
+Q6<How many unique cities are represented by employees?
+ans : SELECT COUNT(DISTINCT City) AS UniqueCityCount FROM Employees;
+
+
