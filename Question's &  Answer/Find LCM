@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+long Lcm(long m, long n) {
+    long a = m;
+    long b = n;
+    while (m != n) {
+        m < n ?  m+=a: n+=b;
+    }
+    return m;
+}
+
+int main() {
+    long a, b,c;
+    cin >> a >> b>>c;
+   // cout<<Lcm(a,b);
+    cout << Lcm(Lcm(a,b),c);
+    return 0;
+}
