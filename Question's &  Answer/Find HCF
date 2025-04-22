@@ -1,0 +1,17 @@
+
+#include <iostream>
+using namespace std;
+ long HCF ( long m, long n){
+     while( m!=n){
+         m>n ? m-=n: n-=m;
+     }
+     return m; // return n(both are same)
+ }
+int main()
+{
+  long a,b,c;
+  cin>> a>>b>>c;
+ // cout<<HCF(a,b); // For two no.
+  cout<<HCF(HCF(a,b),c); // For three no.
+return 0;
+}
