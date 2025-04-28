@@ -1,0 +1,36 @@
+/*//  find length  one nede to another 
+
+           O(O)
+         /   \
+   (1)  O     O (2)
+      /  \   /  \
+(3)  O   O   O    O
+        (4)  (5)   (6)
+
+ INPUT: 8 9       ||   3  4     || 9 10 
+out :- 4          ||    2       || 2
+*/
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    unsigned long a,b;
+    long c=0;
+    cin>>a>>b;
+     while( a!=b){
+         if( a>b){
+              a= ( a-1)/2;
+              c++;
+         }
+              else{
+                  b= (b-1)/2;
+                  c++;
+              }
+     }
+     cout<< c;
+     
+   // std::cout<<"Hello World";
+
+    return 0;
+}
