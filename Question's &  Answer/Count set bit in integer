@@ -1,0 +1,27 @@
+#include <iostream>
+#include <bitset>
+using namespace std;
+
+int  SetBit(unsigned  long n) {
+    int count = 0;  
+    bitset<32> binary(n);    //  Convert number to binary 
+
+    
+    for (int i = 0; i < 32; i++) {
+        if (binary[i] == 1) {  
+            count++;  
+        }
+    }
+
+    return count;
+}
+
+int main() {
+    unsigned long num;
+       cin >> num;
+
+     cout<<SetBit(num);
+    
+
+    return 0;
+}
