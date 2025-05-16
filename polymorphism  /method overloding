@@ -1,0 +1,16 @@
+ // method overloding 
+  // ⭐⭐⭐ 1  By using defolt argument
+#include<iostream>
+using namespace std;
+ class A {
+     public:
+      void p ( int m, int n =7){
+           cout<< " hII";
+      }
+ };
+  int main(){
+        A a1;
+        a1.p( 4,5);
+        a1.p( 4);
+  }
+ 
