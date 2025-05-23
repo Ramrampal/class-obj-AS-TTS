@@ -1,1 +1,63 @@
+#include <iostream>
+using namespace std;
+
+class A {
+    public:
+    int m, n;
+    A() {
+        m = n = 0;
+    }
+
+    A(int p, int q) {
+         m = p;
+        n = q;
+    }
+
+    // Overloaded '+' operator
+    A operator+( A l1) {
+        A Temp;
+        Temp.m = m + l1.m;
+        Temp.n = n + l1.n;
+        return Temp;
+          }
+// Overloaded '*' operator         
+         A operator * (A l2 ) {
+             A Temp ;
+              Temp.m = m* l2.m;
+              Temp.n = n*l2.n;
+              return Temp;
+         }
+// Overloaded '-' operator         
+           A operator - (A l2 ) {
+             A Temp ;
+              Temp.m = m- l2.m;
+              Temp.n = n-l2.n;
+              return Temp;
+         }
+// Overloaded '/' operator
+            A operator / (A l2 ) {
+             A Temp ;
+              Temp.m = m/ l2.m;
+              Temp.n = n/l2.n;
+              return Temp;
+         }
+      /*      A operator :: (A l2 ) {
+             A Temp ;
+              Temp.m = m :: l2.m;
+              Temp.n = n ::l2.n;
+              return Temp;
+         }
+         */
+
+    void display() {
+        cout << m << " " << n << endl;
+    }
+      };
+
+int main() {
+    A a(2, 5), b(7, 9), c;
+    c = a / b + a *a - b ;
+    c.display(); 
+    return 0;
+       }
 
