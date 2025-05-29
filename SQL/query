@@ -22,3 +22,7 @@ ans:-select department , count (*) as total_employees  from employees group by d
 
 Q8:-Write a query to retrieve the author_id, author_name, and publication_name for authors whose articles got zero views. The result should be sorted by author_id in ascending order.
 ans:-select   author_id, author_name, publication_name from views  where  view_count = 0 order by  author_id asc;
+
+Q9:-Count the number of employees in each department.
+ans:-SELECT department, COUNT(*) FROM Employees GROUP BY department;
+select customer_id, count(*) from customers  group by  customer_id;
