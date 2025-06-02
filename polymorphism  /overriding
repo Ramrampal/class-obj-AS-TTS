@@ -1,0 +1,26 @@
+
+#include <iostream>
+using namespace std;
+
+ class A {
+      public:
+      
+      void  R(){
+            cout<< " hii";
+       }
+       
+ };
+  class  B : public A {
+      public:
+    void    R(){
+             cout<< " hello";
+        }
+  };
+int main()
+{
+ B b;
+ A *a1;
+ a1 = &b;
+ a1->R();
+    return 0;
+}                          //    💡💡💡💡 output : hii
