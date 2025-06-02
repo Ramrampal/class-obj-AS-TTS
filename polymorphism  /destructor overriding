@@ -1,0 +1,24 @@
+
+#include <iostream>
+using namespace std;
+class A {
+      public:
+      
+        ~A(){
+            cout<< " hii";
+       }
+       
+ };
+  class  B : public A {
+      public:
+     ~ B(){
+             cout<< " hello";
+        }
+  };
+int main()
+{
+A *a1 =  new B();
+delete  a1 ;
+
+    return 0;
+}    // 💡💡💡💡 output :  hii   withot virtual
