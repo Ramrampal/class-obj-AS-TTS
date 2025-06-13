@@ -1,0 +1,34 @@
+
+
+#include <iostream>
+using namespace std;
+ class A {
+     public:
+    A(){
+         cout<< "a";
+     }
+ };
+ class B : virtual public A {
+      public:
+      B(){
+          cout<<"b";
+      }
+ };
+ class C : virtual public A{
+     public:
+      C(){
+          cout<< "c";
+      }
+ };
+  class D : public C ,public B{
+      public:
+       D(){
+            cout<< "d";
+       }
+  };
+int main()
+{
+   D d;
+
+    return 0;
+}
