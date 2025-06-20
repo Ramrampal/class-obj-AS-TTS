@@ -8,8 +8,6 @@ out 1 2
 out. 5
 
 
-
-
 #include <iostream>
 #include <vector>
 #include <map>
