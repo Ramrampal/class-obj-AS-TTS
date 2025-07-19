@@ -1,1 +1,18 @@
 
+// create a node in link list 
+class node{
+ public int data;
+ public node next;
+public node( int d)
+{
+data = d;
+next = null;
+}
+}
+ public class main{
+public static void main( String [] args){
+ node n= new node ( 23);
+System.out.println( " node_" + n.data);
+System.out.println(" next" + n.next);
+}
+}
