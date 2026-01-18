@@ -1,3 +1,27 @@
+// overriding
+#include<bits/stdc++.h>
+using namespace std;
+class A{
+    public:
+    virtual void show(){
+         cout<<" parent class";
+    }
+};
+class B: public A{
+     public:
+     void show(){
+          cout<<" child class";
+     }
+};
+int main(){
+    B b1;
+    A *p = &b1;
+    p -> show();
+    return 0;
+}
+// out= child class
+//👍👍👍
+
 
 #include <iostream>
 using namespace std;
